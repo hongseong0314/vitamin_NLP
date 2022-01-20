@@ -95,6 +95,6 @@ def yogiyo_scrapping(*ar):
         com = pyautogui.confirm("csv 저장 하실?" , "확인")
         if com == "OK":
             print("csv 파일로 저장합니다...")
-            df.to_csv("{}_comment.csv".format(name), index=False)
+            df.to_csv(os.path.join(os.getcwd(), "data/{}_comment.csv".format(name)), index=False)
 
-yogiyo_scrapping("후라이드참잘하는집-영등포점")
+yogiyo_scrapping("굽네치킨&피자-신도림점")
